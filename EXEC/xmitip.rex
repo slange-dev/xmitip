@@ -735,7 +735,7 @@
          *     udsmtp can be found at http://www.dignus.com/freebies/ *
          * ---------------------------------------------------------- *
          * History:                                                   *
-         *          2023-12-12 - 23.10                                *
+         *          2023-12-12 - 23.12                                *
          *                     - Add NOMSGSum option                  *
          *          2021-03-25 - 21.03                                *
          *                     - Add SLK as valid format @DM03252021  *
@@ -4402,7 +4402,7 @@
                      "ALLOC F("workdd") SYSOUT("sysout_class")" ,
                         "recfm(v b) lrecl("save_lrecl+4") blksize(0) ",
                         ""writer_kw" "dest_kw
-                     _rcode_ = rc
+                     _rcode_ = rc    4
                   end;
              else do;
                      space = (out.0 * save_lrecl)%34000
