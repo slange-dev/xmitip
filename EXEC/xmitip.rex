@@ -1,5 +1,5 @@
         /* ---------------------  rexx procedure  ------------------- */
-        ver = "23.12"
+        ver = "25.11"
         /* Name:      XMITIP                                          *
          *                                                            *
          * Function:  Transmit a message to a user on the LAN via     *
@@ -735,6 +735,8 @@
          *     udsmtp can be found at http://www.dignus.com/freebies/ *
          * ---------------------------------------------------------- *
          * History:                                                   *
+         *          2025-11-08 - 25.11                                *
+         *                     - Bug fix return code                  *
          *          2023-12-12 - 23.12                                *
          *                     - Add NOMSGSum option                  *
          *          2021-03-25 - 21.03                                *
@@ -4402,7 +4404,7 @@
                      "ALLOC F("workdd") SYSOUT("sysout_class")" ,
                         "recfm(v b) lrecl("save_lrecl+4") blksize(0) ",
                         ""writer_kw" "dest_kw
-                     _rcode_ = rc    4
+                     _rcode_ = rc
                   end;
              else do;
                      space = (out.0 * save_lrecl)%34000
